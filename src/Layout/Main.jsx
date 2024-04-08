@@ -3,7 +3,7 @@ import Footer from "../Conponent/Footer/Footer";
 import Navbar from "../Conponent/Navbar/Navbar";
 const Main = () => {
   return (
-    <div>
+    <div className="mx-auto  w-11/12">
       <Navbar />
       <Outlet />
       <Footer />

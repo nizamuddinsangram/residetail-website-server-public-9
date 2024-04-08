@@ -4,7 +4,6 @@ const Home = () => {
   return (
     <div>
       <Banner />
-      <p className="text-xl">my home my peace</p>
     </div>
   );
 };
