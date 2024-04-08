@@ -27,6 +27,7 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
   const logOut = () => {
+    setLoading(true);
     signOut(auth);
   };
   const googleSignIn = () => {
@@ -35,12 +36,11 @@ const AuthProvider = ({ children }) => {
   const githubSignIn = () => {
     return signInWithPopup(auth, githubProvider);
   };
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      if (currentUser) {
-        console.log("state ovserver", currentUser);
-        setUser(currentUser);
-      }
+      setUser(currentUser);
+      setLoading(false);
     });
     return () => {
       unsubscribe();

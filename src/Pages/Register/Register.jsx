@@ -1,28 +1,68 @@
-import { useContext } from "react";
+import { updateProfile } from "firebase/auth";
+import { useContext, useState } from "react";
+import { FaEye, FaRegEyeSlash } from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 const Register = () => {
+  const [showPassword, setShowPassword] = useState(false);
   const { createUser } = useContext(AuthContext);
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
+    const name = form.name.value;
+    const PhotoUrl = form.photo.value;
+    console.log(email, password, name, PhotoUrl);
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
+        updateProfile(result.user, {
+          displayName: name,
+          photoURL: PhotoUrl,
+        })
+          .then(() => {})
+          .catch(() => {});
       })
       .catch((err) => {
         console.log(err.message);
       });
     form.reset();
   };
+  //toggle icon for password
+  const togglePassword = () => {
+    setShowPassword(!showPassword);
+  };
   return (
     <div className="h-[87vh]">
       <div className="w-full max-w-md p-8 space-y-3 mb-4  mx-auto rounded-xl bg-rose-300 text-rose-900">
         <h1 className="text-2xl font-bold text-center">Register</h1>
         <form onSubmit={handleRegister} noValidate="" className="space-y-6">
+          <div className="space-y-1 text-sm">
+            <label htmlFor="name" className="block text-rose-900">
+              Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name "
+              className="w-full px-4 py-3 rounded-md border-gray-700 bg-rose-500 text-white focus:border-violet-400"
+            />
+          </div>
+          <div className="space-y-1 text-sm">
+            <label htmlFor="photo" className="block text-rose-900">
+              Photo Url
+            </label>
+            <input
+              type="text"
+              name="photo"
+              id="photo"
+              placeholder="photoUrl"
+              className="w-full px-4 py-3 rounded-md border-gray-700 bg-rose-500 text-white focus:border-violet-400"
+            />
+          </div>
           <div className="space-y-1 text-sm">
             <label htmlFor="email" className="block text-rose-900">
               Email
@@ -39,13 +79,27 @@ const Register = () => {
             <label htmlFor="password" className="block text-rose-900">
               Password
             </label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Password"
-              className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400"
-            />
+            {/* eye  */}
+            <div className="relative flex  items-center">
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                id="password"
+                placeholder="Password"
+                className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400"
+              />
+              {showPassword ? (
+                <FaRegEyeSlash
+                  className="bg-blue-500 absolute right-2 cursor-pointer"
+                  onClick={togglePassword}
+                />
+              ) : (
+                <FaEye
+                  className="bg-blue-500 absolute right-2 cursor-pointer"
+                  onClick={togglePassword}
+                />
+              )}
+            </div>
             <div className="flex justify-end text-xs text-gray-400">
               <a rel="noopener noreferrer" href="#">
                 Forgot Password?

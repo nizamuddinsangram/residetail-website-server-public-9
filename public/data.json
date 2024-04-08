@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "estate_title": "Modern Single Family Home",
+    "segment_name": "Residential",
+    "description": "Beautiful modern single family home with spacious living areas.",
+    "price": "$500,000",
+    "status": "sale",
+    "area": "2500 sq ft",
+    "location": "City Center",
+    "facilities": ["living room", "kitchen", "backyard"]
+  },
+  {
+    "id": 2,
+    "estate_title": "Luxury Townhouse",
+    "segment_name": "Residential",
+    "description": "Luxurious townhouse with elegant interiors and stunning views.",
+    "price": "$700,000",
+    "status": "sale",
+    "area": "3000 sq ft",
+    "location": "Suburban Area",
+    "facilities": ["living room", "swimming pool", "gym"]
+  },
+  {
+    "id": 3,
+    "estate_title": "Modern Apartment",
+    "segment_name": "Residential",
+    "description": "Modern apartment in a prime location with top-notch amenities.",
+    "price": "$2,000/month",
+    "status": "rent",
+    "area": "1200 sq ft",
+    "location": "Downtown",
+    "facilities": ["living room", "balcony", "fitness center"]
+  },
+  {
+    "id": 4,
+    "estate_title": "Student Housing",
+    "segment_name": "Student Housing",
+    "description": "Comfortable student housing with study areas and recreational facilities.",
+    "price": "$800/month",
+    "status": "rent",
+    "area": "800 sq ft",
+    "location": "Near Campus",
+    "facilities": ["study room", "laundry facilities", "community kitchen"]
+  },
+  {
+    "id": 5,
+    "estate_title": "Senior Living Community",
+    "segment_name": "Senior Living",
+    "description": "Senior living community offering personalized care and activities.",
+    "price": "$3,500/month",
+    "status": "rent",
+    "area": "1500 sq ft",
+    "location": "Retirement Village",
+    "facilities": ["dining hall", "library", "gardens"]
+  },
+  {
+    "id": 6,
+    "estate_title": "Vacation Rental Villa",
+    "segment_name": "Vacation Rentals",
+    "description": "Luxurious villa for vacation rental with private pool and scenic views.",
+    "price": "$300/night",
+    "status": "rent",
+    "area": "3500 sq ft",
+    "location": "Beachfront",
+    "facilities": ["private pool", "ocean view terrace", "BBQ area"]
+  },
+  {
+    "id": 7,
+    "estate_title": "Country Estate",
+    "segment_name": "Residential",
+    "description": "Spacious country estate with acres of land and picturesque surroundings.",
+    "price": "$1,200,000",
+    "status": "sale",
+    "area": "5000 sq ft",
+    "location": "Rural Area",
+    "facilities": ["gardens", "barn", "guesthouse"]
+  },
+  {
+    "id": 8,
+    "estate_title": "Lakefront Cabin",
+    "segment_name": "Vacation Rentals",
+    "description": "Cozy cabin on the lakefront with rustic charm and modern amenities.",
+    "price": "$200/night",
+    "status": "rent",
+    "area": "1000 sq ft",
+    "location": "Lakefront",
+    "facilities": ["fireplace", "boat dock", "deck"]
+  },
+  {
+    "id": 9,
+    "estate_title": "City Loft",
+    "segment_name": "Residential",
+    "description": "Chic loft apartment in the heart of the city with urban vibes.",
+    "price": "$1,500/month",
+    "status": "rent",
+    "area": "800 sq ft",
+    "location": "City Center",
+    "facilities": ["open floor plan", "exposed brick walls", "rooftop terrace"]
+  },
+  {
+    "id": 10,
+    "estate_title": "Mountain Retreat",
+    "segment_name": "Vacation Rentals",
+    "description": "Secluded mountain retreat for a peaceful getaway surrounded by nature.",
+    "price": "$250/night",
+    "status": "rent",
+    "area": "2000 sq ft",
+    "location": "Mountainside",
+    "facilities": ["hot tub", "hiking trails", "scenic views"]
+  }
+]
