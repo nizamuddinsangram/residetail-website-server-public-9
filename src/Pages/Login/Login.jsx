@@ -1,10 +1,20 @@
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 const Login = () => {
+  const { signIn } = useContext(AuthContext);
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
+    signIn(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
   };
   return (
     <div className="h-[87vh]">
@@ -41,7 +51,7 @@ const Login = () => {
             </div>
           </div>
           <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-violet-400">
-            Sign in
+            Login
           </button>
         </form>
         <div className="flex items-center pt-4 space-x-1">
@@ -82,13 +92,13 @@ const Login = () => {
         </div>
         <p className="text-xs text-center sm:px-6 text-gray-400">
           Donot have an account?
-          <a
+          <Link
+            to="/register"
             rel="noopener noreferrer"
-            href="#"
             className="underline text-gray-100"
           >
-            Sign up
-          </a>
+            Register
+          </Link>
         </p>
       </div>
     </div>
