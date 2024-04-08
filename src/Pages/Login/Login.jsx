@@ -81,7 +81,7 @@ const Login = () => {
           </button>
         </div>
         <p className="text-xs text-center sm:px-6 text-gray-400">
-          Don't have an account?
+          Donot have an account?
           <a
             rel="noopener noreferrer"
             href="#"
