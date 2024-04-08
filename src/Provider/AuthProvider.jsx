@@ -1,4 +1,5 @@
 import {
+  GithubAuthProvider,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
@@ -14,6 +15,7 @@ export const AuthContext = createContext(null);
 // eslint-disable-next-line react/prop-types
 const AuthProvider = ({ children }) => {
   const googleProvider = new GoogleAuthProvider();
+  const githubProvider = new GithubAuthProvider();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const createUser = (email, password) => {
@@ -29,6 +31,9 @@ const AuthProvider = ({ children }) => {
   };
   const googleSignIn = () => {
     return signInWithPopup(auth, googleProvider);
+  };
+  const githubSignIn = () => {
+    return signInWithPopup(auth, githubProvider);
   };
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -49,6 +54,7 @@ const AuthProvider = ({ children }) => {
     signIn,
     logOut,
     googleSignIn,
+    githubSignIn,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
