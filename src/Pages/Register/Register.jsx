@@ -1,19 +1,27 @@
 import { Link } from "react-router-dom";
 const Register = () => {
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+    form.reset();
+  };
   return (
     <div className="h-[87vh]">
       <div className="w-full max-w-md p-8 space-y-3 mb-4  mx-auto rounded-xl bg-rose-300 text-rose-900">
         <h1 className="text-2xl font-bold text-center">Register</h1>
-        <form noValidate="" action="" className="space-y-6">
+        <form onSubmit={handleRegister} noValidate="" className="space-y-6">
           <div className="space-y-1 text-sm">
-            <label htmlFor="username" className="block text-rose-900">
-              Username
+            <label htmlFor="email" className="block text-rose-900">
+              Email
             </label>
             <input
-              type="text"
-              name="username"
-              id="username"
-              placeholder="Username"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email address"
               className="w-full px-4 py-3 rounded-md border-gray-700 bg-rose-500 text-white focus:border-violet-400"
             />
           </div>
