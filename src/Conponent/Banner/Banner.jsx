@@ -16,7 +16,7 @@ const Banner = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <div className="h-[80vh] mb-2">
+    <div className="h-[90vh] mb-2">
       <Swiper
         style={{
           "--swiper-navigation-color": "#fff",

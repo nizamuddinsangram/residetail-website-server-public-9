@@ -8,7 +8,8 @@
     "status": "sale",
     "area": "2500 sq ft",
     "location": "City Center",
-    "facilities": ["living room", "kitchen", "backyard"]
+    "facilities": ["living room", "kitchen", "backyard"],
+    "image": "https://i.ibb.co/QNv1BM2/image4.jpg"
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
     "status": "sale",
     "area": "3000 sq ft",
     "location": "Suburban Area",
-    "facilities": ["living room", "swimming pool", "gym"]
+    "facilities": ["living room", "swimming pool", "gym"],
+    "image": "https://i.ibb.co/hWxcjvq/image3.jpg"
   },
   {
     "id": 3,
@@ -30,7 +32,8 @@
     "status": "rent",
     "area": "1200 sq ft",
     "location": "Downtown",
-    "facilities": ["living room", "balcony", "fitness center"]
+    "facilities": ["living room", "balcony", "fitness center"],
+    "image": "https://i.ibb.co/SPP6kRp/image2.jpg"
   },
   {
     "id": 4,
@@ -41,7 +44,8 @@
     "status": "rent",
     "area": "800 sq ft",
     "location": "Near Campus",
-    "facilities": ["study room", "laundry facilities", "community kitchen"]
+    "facilities": ["study room", "laundry facilities", "community kitchen"],
+    "image": "https://i.ibb.co/PcsPjDT/image1.jpg"
   },
   {
     "id": 5,
@@ -52,7 +56,8 @@
     "status": "rent",
     "area": "1500 sq ft",
     "location": "Retirement Village",
-    "facilities": ["dining hall", "library", "gardens"]
+    "facilities": ["dining hall", "library", "gardens"],
+    "image": "https://i.ibb.co/cvG7jYL/image5.jpg"
   },
   {
     "id": 6,
@@ -63,7 +68,8 @@
     "status": "rent",
     "area": "3500 sq ft",
     "location": "Beachfront",
-    "facilities": ["private pool", "ocean view terrace", "BBQ area"]
+    "facilities": ["private pool", "ocean view terrace", "BBQ area"],
+    "image": "https://i.ibb.co/Fq78khZ/image6.jpg"
   },
   {
     "id": 7,
@@ -74,7 +80,8 @@
     "status": "sale",
     "area": "5000 sq ft",
     "location": "Rural Area",
-    "facilities": ["gardens", "barn", "guesthouse"]
+    "facilities": ["gardens", "barn", "guesthouse"],
+    "image": "https://i.ibb.co/bJq7fPD/photo-1494526585095-c41746248156.jpg"
   },
   {
     "id": 8,
@@ -85,7 +92,8 @@
     "status": "rent",
     "area": "1000 sq ft",
     "location": "Lakefront",
-    "facilities": ["fireplace", "boat dock", "deck"]
+    "facilities": ["fireplace", "boat dock", "deck"],
+    "image": "https://i.ibb.co/zfpDVBn/photo-1474606179262-1ac393ca3316.jpg"
   },
   {
     "id": 9,
@@ -96,17 +104,7 @@
     "status": "rent",
     "area": "800 sq ft",
     "location": "City Center",
-    "facilities": ["open floor plan", "exposed brick walls", "rooftop terrace"]
-  },
-  {
-    "id": 10,
-    "estate_title": "Mountain Retreat",
-    "segment_name": "Vacation Rentals",
-    "description": "Secluded mountain retreat for a peaceful getaway surrounded by nature.",
-    "price": "$250/night",
-    "status": "rent",
-    "area": "2000 sq ft",
-    "location": "Mountainside",
-    "facilities": ["hot tub", "hiking trails", "scenic views"]
+    "facilities": ["open floor plan", "exposed brick walls", "rooftop terrace"],
+    "image": "https://i.ibb.co/chwpbmY/photo-1651375773887-6bafd073f37e.jpg"
   }
 ]
