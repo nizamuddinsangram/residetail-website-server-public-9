@@ -16,7 +16,7 @@ const Banner = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <div className="h-[80vh] my-2">
+    <div className="h-[80vh] mb-2">
       <Swiper
         style={{
           "--swiper-navigation-color": "#fff",
@@ -30,7 +30,7 @@ const Banner = () => {
         className="mySwiper2 "
       >
         <SwiperSlide>
-          <img src={img1} className=" h-[90vh] rounded-lg w-full	" />
+          <img src={img1} className=" h-[90vh] rounded-b-lg w-full	" />
         </SwiperSlide>
         <SwiperSlide>
           {" "}
