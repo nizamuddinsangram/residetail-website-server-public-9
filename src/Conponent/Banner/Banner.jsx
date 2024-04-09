@@ -1,46 +1,45 @@
+import React, { useState } from "react";
+import img1 from "../../../public/image1.avif";
+import img2 from "../../../public/image2.avif";
+import img3 from "../../../public/image3.avif";
+// Import Swiper React components
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
 const Banner = () => {
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
   return (
-    <div className="">
-      <div className="carousel w-full h-[87vh]">
-        <div id="item1" className="carousel-item w-full">
-          <img
-            src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
-            className="w-full"
-          />
-        </div>
-        <div id="item2" className="carousel-item w-full">
-          <img
-            src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg"
-            className="w-full"
-          />
-        </div>
-        <div id="item3" className="carousel-item w-full">
-          <img
-            src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg"
-            className="w-full"
-          />
-        </div>
-        <div id="item4" className="carousel-item w-full">
-          <img
-            src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg"
-            className="w-full"
-          />
-        </div>
-      </div>
-      <div className="flex justify-center w-full py-2 gap-2">
-        <a href="#item1" className="btn btn-xs">
-          1
-        </a>
-        <a href="#item2" className="btn btn-xs">
-          2
-        </a>
-        <a href="#item3" className="btn btn-xs">
-          3
-        </a>
-        <a href="#item4" className="btn btn-xs">
-          4
-        </a>
-      </div>
+    <div className="h-[80vh] my-2">
+      <Swiper
+        style={{
+          "--swiper-navigation-color": "#fff",
+          "--swiper-pagination-color": "#fff",
+        }}
+        loop={true}
+        spaceBetween={10}
+        navigation={true}
+        thumbs={{ swiper: thumbsSwiper }}
+        modules={[FreeMode, Navigation, Thumbs]}
+        className="mySwiper2 "
+      >
+        <SwiperSlide>
+          <img src={img1} className=" h-[90vh] rounded-lg w-full	" />
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <img src={img2} className="rounded-lg h-[90vh] 	w-full" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={img3} className="rounded-lg h-[90vh] 	w-full" />
+        </SwiperSlide>
+      </Swiper>
     </div>
   );
 };
