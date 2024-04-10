@@ -26,6 +26,7 @@ const Login = () => {
     googleSignIn()
       .then((result) => {
         console.log(result.user);
+        navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
         console.log(err.message);
@@ -35,6 +36,7 @@ const Login = () => {
     githubSignIn()
       .then((result) => {
         console.log(result.user);
+        navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
         console.log(err.message);

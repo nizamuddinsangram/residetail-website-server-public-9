@@ -41,6 +41,7 @@ const Navbar = () => {
           >
             Register
           </NavLink>
+
           {user && (
             <NavLink
               to="/updateProfile"
