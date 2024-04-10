@@ -8,6 +8,7 @@ import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
+import UpdateProfile from "./Pages/UpdateProfile/UpdateProfile";
 import AuthProvider from "./Provider/AuthProvider";
 import PrivateRoute from "./Route/PrivateRoute";
 const router = createBrowserRouter([
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register />,
+      },
+      {
+        path: "/updateProfile",
+        element: <UpdateProfile />,
       },
       {
         path: "/details/:id",

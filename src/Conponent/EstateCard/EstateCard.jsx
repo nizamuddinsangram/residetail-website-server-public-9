@@ -21,12 +21,13 @@ const EstateCard = ({ card }) => {
           <img src={image} alt="Shoes" className="h-96	 w-full" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">
-            Shoes!
-            <div className="badge badge-secondary">NEW</div>
-          </h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-end">
+          <h2 className="card-title">{estate_title}</h2>
+          <p>{description}</p>
+          <div className="flex justify-between  items-center">
+            <p>{status}</p>
+            <p>{price}</p>
+          </div>
+          <div className="card-actions ">
             <Link to={`/details/${id}`} className="btn btn-accent text-white">
               View Property
             </Link>
