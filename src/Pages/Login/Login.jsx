@@ -1,45 +1,81 @@
 import { useContext } from "react";
+import Swal from "sweetalert2";
+
+import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import img from "../../../public/login1.avif";
 import { AuthContext } from "../../Provider/AuthProvider";
 const Login = () => {
-  const location = useLocation();
-  console.log(location);
-  const navigate = useNavigate();
   const { signIn, googleSignIn, githubSignIn } = useContext(AuthContext);
-  const handleLogin = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const email = form.email.value;
-    const password = form.password.value;
-    signIn(email, password)
+  const navigate = useNavigate();
+  const location = useLocation();
+  const {
+    register,
+    handleSubmit,
+    watch,
+    reset,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => {
+    console.log(data);
+    signIn(data.email, data.password)
       .then((result) => {
         console.log(result.user);
-        form.reset();
+        Swal.fire({
+          icon: "success",
+          title: "Login Successful!",
+          text: "You have successfully Login.",
+        });
+        reset();
         navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
         console.log(err.message);
+        Swal.fire({
+          icon: "error",
+          title: "Login Failed",
+          text: err.message,
+        });
       });
   };
   const handleGoogleLogin = () => {
     googleSignIn()
       .then((result) => {
         console.log(result.user);
+        Swal.fire({
+          icon: "success",
+          title: "Google Login Successful!",
+          text: "You have successfully google login.",
+        });
         navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
         console.log(err.message);
+        Swal.fire({
+          icon: "error",
+          title: "Login Failed",
+          text: err.message,
+        });
       });
   };
   const handleGithubLogin = () => {
     githubSignIn()
       .then((result) => {
+        Swal.fire({
+          icon: "success",
+          title: "Github Login Successful!",
+          text: "You have successfully Github login.",
+        });
         console.log(result.user);
         navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
         console.log(err.message);
+        Swal.fire({
+          icon: "error",
+          title: "Login Failed",
+          text: err.message,
+        });
       });
   };
   return (
@@ -50,12 +86,17 @@ const Login = () => {
       >
         <div className="w-2/6 p-8 space-y-3 mb-4 rounded-lg bg-teal-300 bg-opacity-10 text-white">
           <h1 className="text-2xl font-bold text-center">Login</h1>
-          <form onSubmit={handleLogin} noValidate className="space-y-6">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            noValidate
+            className="space-y-6"
+          >
             <div className="space-y-1 text-sm">
               <label htmlFor="email" className="block text-white">
                 Email
               </label>
               <input
+                {...register("email")}
                 type="email"
                 name="email"
                 id="email"
@@ -68,6 +109,7 @@ const Login = () => {
                 Password
               </label>
               <input
+                {...register("password")}
                 type="password"
                 name="password"
                 id="password"
