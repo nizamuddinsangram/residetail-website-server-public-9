@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between">
         {/* Left side */}
         <div className="flex items-center">
-          <span className=" text-xl font-semibold">Website Name</span>
+          <span className=" text-xl font-semibold">Residential</span>
         </div>
 
         {/* Middle */}
