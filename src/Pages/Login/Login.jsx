@@ -84,12 +84,12 @@ const Login = () => {
       <Helmet>
         <title>Residential | Login </title>
       </Helmet>
-      <div className="flex h-screen w-full">
+      <div className="flex  h-screen w-full">
         <div
           className="w-full flex justify-center items-center bg-cover bg-center"
           style={{ backgroundImage: `url(${img})` }}
         >
-          <div className="w-2/6 p-8 space-y-3 mb-4 rounded-lg bg-teal-300 bg-opacity-10 text-white">
+          <div className="lg:w-2/6 md:w-1/2 w-full p-8 space-y-3 mb-4 rounded-lg bg-teal-300 bg-opacity-10 text-white">
             <h1 className="text-2xl font-bold text-center">Login</h1>
             <form
               onSubmit={handleSubmit(onSubmit)}

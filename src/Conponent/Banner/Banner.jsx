@@ -25,7 +25,7 @@ const Banner = () => {
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
   return (
-    <div className="h-[90vh] mb-2">
+    <div className="h-[45vh]  lg:h-[87vh]  mb-2">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -42,34 +42,34 @@ const Banner = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src={img2} className=" h-[90vh] rounded-b-lg w-full	" />
+          <img src={img2} className="h-full  rounded-b-lg w-full	" />
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <img src={img1} className="rounded-lg h-[90vh] 	w-full" />
+          <img src={img1} className="rounded-lg h-full	w-full" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img3} className="rounded-lg h-[90vh] 	w-full" />
+          <img src={img3} className="rounded-lg h-full 	w-full" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img4} className=" h-[90vh] rounded-b-lg w-full	" />
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <img src={img5} className="rounded-lg h-[90vh] 	w-full" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={img6} className="rounded-lg h-[90vh] 	w-full" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={img7} className=" h-[90vh] rounded-b-lg w-full	" />
+          <img src={img4} className="  rounded-b-lg w-full	h-full" />
         </SwiperSlide>
         <SwiperSlide>
           {" "}
-          <img src={img8} className="rounded-lg h-[90vh] 	w-full" />
+          <img src={img5} className="rounded-lg  h-full 	w-full" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img9} className="rounded-lg h-[90vh] 	w-full" />
+          <img src={img6} className="rounded-lg h-full 	w-full" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={img7} className=" rounded-b-lg w-full	h-full" />
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <img src={img8} className="rounded-lg  h-full 	w-full" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={img9} className="rounded-lg h-full  	w-full" />
         </SwiperSlide>
         <div className="autoplay-progress" slot="container-end">
           <svg viewBox="0 0 48 48" ref={progressCircle}>
