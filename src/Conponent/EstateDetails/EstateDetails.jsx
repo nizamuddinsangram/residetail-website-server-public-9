@@ -13,12 +13,12 @@ const EstateDetails = () => {
       <Helmet>
         <title>Residential | Details page</title>
       </Helmet>
-      <div className="flex justify-between items-center w-full h-[67vh]">
-        <div className=" w-1/2 h-full">
-          <img src={singleData?.image} className="h-full w-full" />
+      <div className="lg:flex  justify-between items-center w-full  lg:h-[67vh]">
+        <div className=" lg:w-1/2 h-full">
+          <img src={singleData?.image} className="h-[50vh] lg:h-full  w-full" />
         </div>
 
-        <div className=" w-1/2 h-full  p-6 flex justify-center items-center ">
+        <div className=" lg:w-1/2 h-full  p-6 flex justify-center items-center ">
           <div>
             <h1 className="text-center text-6xl font-bold my-2">
               {singleData?.segment_name}

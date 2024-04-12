@@ -16,7 +16,7 @@ const AboutUs = () => {
       <Helmet>
         <title>Residential | About Us</title>
       </Helmet>
-      <section className="relative h-[40vh] flex items-center justify-center">
+      <section className="relative h-[40vh] lg:h-[40vh] flex items-center justify-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${backgroundImage})` }}
@@ -32,9 +32,13 @@ const AboutUs = () => {
         </div>
       </section>
       <hr className=" border-sky-400 my-10" />
-      <section className="flex flex-col w-4/5 mx-auto	h-[45vh] md:flex-row items-start justify-center pb-12 px-4">
-        <div className="md:w-1/2 md:flex h-full justify-center">
-          <img src={manImage} alt="Image" className="w-full l rounded-lg" />
+      <section className="flex flex-col w-full lg:w-4/5 mx-auto h-full 	lg:h-[70vh] md:flex-row items-start justify-center pb-12 px-4">
+        <div className="w-full md:w-1/2 md:flex mb-10 lg:mb-0 h-full justify-center">
+          <img
+            src={manImage}
+            alt="Image"
+            className="w-full h-full rounded-lg"
+          />
         </div>
 
         <div className="md:w-1/2 h-full text-white  md:ml-8 flex items-center ">

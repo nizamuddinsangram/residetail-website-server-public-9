@@ -63,7 +63,7 @@ const Register = () => {
           className="w-full flex justify-center items-center bg-cover bg-center"
           style={{ backgroundImage: `url(${img})` }}
         >
-          <div className="w-2/6 p-8 space-y-3 mb-4 rounded-lg bg-teal-300 bg-opacity-10 text-gray-300">
+          <div className="w-full md:w-1/2 lg:w-2/6 p-8 space-y-3 mb-4 rounded-lg bg-teal-300 bg-opacity-10 text-gray-300">
             <h1 className="text-2xl font-bold text-center">Register</h1>
             <form
               onSubmit={handleSubmit(onSubmit)}
@@ -110,7 +110,7 @@ const Register = () => {
                   name="email"
                   id="email"
                   placeholder="Enter your email address"
-                  className="w-full px-4 py-3 rounded-md border-gray-700 bg-rose-100 text-white focus:border-violet-400"
+                  className="w-full px-4 py-3 rounded-md border-gray-700 bg-rose-100 text-black focus:border-violet-400"
                 />
               </div>
               <div className="space-y-1 text-sm">
