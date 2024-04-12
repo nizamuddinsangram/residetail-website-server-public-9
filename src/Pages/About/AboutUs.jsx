@@ -2,6 +2,7 @@
 import client2 from "../../../public/client2.jpeg";
 import client3 from "../../../public/client3.JPG";
 // import client4 from "../../../public/client4.jpeg";
+import { Helmet } from "react-helmet-async";
 import client5 from "../../../public/client5.jpeg";
 import client6 from "../../../public/client6.jpeg";
 
@@ -12,6 +13,9 @@ import {
 const AboutUs = () => {
   return (
     <>
+      <Helmet>
+        <title>Residential | About Us</title>
+      </Helmet>
       <section className="relative h-[40vh] flex items-center justify-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
