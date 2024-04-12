@@ -1,8 +1,17 @@
-# React + Vite
+# MyWebsite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Live Site](https://www.mywebsite.com)
 
-Currently, two official plugins are available:
+## Features and Characteristics:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Interactive Maps**: Utilizing React-Leaflet, our website provides interactive maps that enhance user experience and allow for seamless exploration.
+- **Efficient Form Handling**: Leveraging React Hook Form, we ensure efficient and hassle-free form submissions, enhancing user engagement and satisfaction.
+- **Dynamic Image Sliders**: With Swiper slider, we offer dynamic and visually appealing image sliders that captivate users' attention and showcase content effectively.
+- **Responsive Design**: Our website is designed with responsiveness in mind, ensuring a consistent and optimal viewing experience across various devices and screen sizes.
+- **Accessibility**: We prioritize accessibility, ensuring that our website is inclusive and usable for all users, regardless of their abilities or assistive technologies.
+
+## NPM Package Used:
+
+- `react-leaflet`
+- `react-hook-form`
+- `swiper`
