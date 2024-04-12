@@ -12,7 +12,11 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between">
         {/* Left side */}
         <div className="flex items-center">
-          <span className=" text-xl font-semibold">Residential</span>
+          <span className=" text-xl font-semibold text-cyan-700">
+            My Home
+            <br />
+            <span className="text-green-600">Real State</span>
+          </span>
         </div>
 
         {/* Middle */}
@@ -41,6 +45,16 @@ const Navbar = () => {
           >
             Register
           </NavLink>
+          {user && (
+            <NavLink
+              to="/aboutUs"
+              className={({ isActive }) =>
+                isActive ? "btn bg-teal-500 border-0" : "default"
+              }
+            >
+              About Us
+            </NavLink>
+          )}
 
           {user && (
             <NavLink
