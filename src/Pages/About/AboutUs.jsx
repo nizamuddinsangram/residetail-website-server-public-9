@@ -2,15 +2,23 @@
 import client2 from "../../../public/client2.jpeg";
 import client3 from "../../../public/client3.JPG";
 // import client4 from "../../../public/client4.jpeg";
+import "leaflet/dist/leaflet.css";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import client5 from "../../../public/client5.jpeg";
 import client6 from "../../../public/client6.jpeg";
-
 import {
   default as backgroundImage,
   default as manImage,
 } from "../../../public/image6.avif";
 const AboutUs = () => {
+  const [mapLoaded, setMapLoaded] = useState(false);
+
+  useEffect(() => {
+    setMapLoaded(true);
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -127,6 +135,24 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+      <div className="mb-10">
+        <MapContainer
+          className="w-full h-full md:w-3/4 md:h-[70vh] lg:w-80vw lg:h-80vh"
+          center={[51.505, -0.09]}
+          zoom={13}
+          scrollWheelZoom={false}
+        >
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={[51.505, -0.09]}>
+            <Popup>
+              A pretty CSS3 popup. <br /> Easily customizable.
+            </Popup>
+          </Marker>
+        </MapContainer>
+      </div>
     </>
   );
 };
