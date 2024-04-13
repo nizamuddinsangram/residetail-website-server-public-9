@@ -1,12 +1,17 @@
+import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
-
 const EstateDetails = () => {
   const LoadedSingleData = useLoaderData();
+  const [data, setData] = useState(LoadedSingleData);
+  console.log(data);
   const { id } = useParams();
-
-  const singleData = LoadedSingleData?.find((data) => data.id == id);
+  // const singleData = Array.isArray(data) ? data.find((d) => d.id == id) : null;
+  const singleData = data?.find((d) => d.id == id);
   console.log(singleData);
+  if (!singleData) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>

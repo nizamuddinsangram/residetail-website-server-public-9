@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("data.json"),
+        loader: () => fetch("/data.json"),
       },
       {
         path: "/login",
@@ -54,7 +54,15 @@ const router = createBrowserRouter([
             <EstateDetails />
           </PrivateRoute>
         ),
-        loader: () => fetch("data.json"),
+        loader: () => fetch("/data.json"),
+        // loader: async () => {
+        //   const response = await fetch("data.json");
+        //   if (!response.ok) {
+        //     throw new Error("Failed to fetch data");
+        //   }
+        //   const data = await response.json();
+        //   return data;
+        // },
       },
     ],
   },
