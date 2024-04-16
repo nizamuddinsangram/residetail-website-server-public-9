@@ -1,13 +1,12 @@
 // import client1 from "../../../public/client1.jpg";
-import client2 from "../../../public/client2.jpeg";
-import client3 from "../../../public/client3.JPG";
-// import client4 from "../../../public/client4.jpeg";
 import "leaflet/dist/leaflet.css";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import client5 from "../../../public/client5.jpeg";
-import client6 from "../../../public/client6.jpeg";
+import client5 from "../../../public//client4.jpeg";
+import client6 from "../../../public/client1.jpg";
+import client2 from "../../../public/client2.jpeg";
+import client3 from "../../../public/client3.JPG";
 import {
   default as backgroundImage,
   default as manImage,
@@ -78,13 +77,15 @@ const AboutUs = () => {
           <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:translate-y-1 transition duration-300">
               <img
-                src={client2}
+                src={client3}
                 alt="Agent 1"
                 className="w-full h-60 object-cover"
               />
               <div className="p-4">
-                <h3 className="text-lg font-semibold mb-2">Tanvir pir</h3>
-                <p className="text-gray-700 text-lg ">Work: handle Women</p>
+                <h3 className="text-lg font-semibold mb-2">Tanvir </h3>
+                <p className="text-gray-700 text-lg ">
+                  Work: Marketing Specialist
+                </p>
               </div>
             </div>
           </div>
@@ -93,13 +94,13 @@ const AboutUs = () => {
           <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:translate-y-1 transition duration-300">
               <img
-                src={client5}
+                src={client6}
                 alt="Agent 2"
                 className="w-full h-60 object-cover"
               />
               <div className="p-4">
-                <h3 className="text-lg font-semibold mb-2">Tamim pir</h3>
-                <p className="text-gray-700">Work: Sales Consultant</p>
+                <h3 className="text-lg font-semibold mb-2">Tamim </h3>
+                <p className="text-gray-700">Work: Real Estate Consultant</p>
               </div>
             </div>
           </div>
@@ -108,13 +109,13 @@ const AboutUs = () => {
           <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:translate-y-1 transition duration-300">
               <img
-                src={client6}
+                src={client5}
                 alt="Agent 3"
                 className="w-full h-60 object-cover"
               />
               <div className="p-4">
-                <h3 className="text-lg font-semibold mb-2">Ataullah pir</h3>
-                <p className="text-gray-700">Work: Manger</p>
+                <h3 className="text-lg font-semibold mb-2">Ataullah </h3>
+                <p className="text-gray-700">Work: Property Manager</p>
               </div>
             </div>
           </div>
@@ -123,21 +124,21 @@ const AboutUs = () => {
           <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:translate-y-1 transition duration-300">
               <img
-                src={client3}
+                src={client2}
                 alt="Agent 4"
                 className="w-full h-60 object-cover"
               />
               <div className="p-4">
                 <h3 className="text-lg font-semibold mb-2">Nizam uddin</h3>
-                <p className="text-gray-700">Work: CEO</p>
+                <p className="text-gray-700">Work: Financial Advisor</p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <div className="mb-10">
+      <div className="mb-10 w-full">
         <MapContainer
-          className="w-full h-full md:w-3/4 md:h-[70vh] lg:w-80vw lg:h-80vh"
+          className="w-full h-full md:w-3/4 md:h-[70vh] lg:w-[80vw] lg:h-auto lg:min-h-[80vh] mx-auto"
           center={[51.505, -0.09]}
           zoom={13}
           scrollWheelZoom={false}

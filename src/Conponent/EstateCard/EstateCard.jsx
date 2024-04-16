@@ -24,7 +24,10 @@ const EstateCard = ({ card }) => {
           <h2 className="card-title">{estate_title}</h2>
           <p>{description}</p>
           <div className="flex justify-between  items-center">
-            <p>{status}</p>
+            <p className="">
+              Status:{" "}
+              <span className="bg-rose-400  px-2 rounded-lg">{status}</span>
+            </p>
             <p>{price}</p>
           </div>
           <div className="card-actions ">

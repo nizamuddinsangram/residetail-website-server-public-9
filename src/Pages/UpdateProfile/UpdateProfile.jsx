@@ -7,12 +7,14 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 const UpdateProfile = () => {
   const navigate = useNavigate();
-  const { user, setUser } = useContext(AuthContext);
+  const { user, setUser, setLoading, loading } = useContext(AuthContext);
   const [name, setName] = useState(user?.displayName || "");
   const [photoURL, setPhotoURL] = useState(user?.photoURL || "");
 
   const handleUpdate = (e) => {
     e.preventDefault();
+
+    setLoading(true);
     console.log("hello");
     updateProfile(user, {
       displayName: name,
@@ -22,12 +24,14 @@ const UpdateProfile = () => {
         setUser({ ...user, displayName: name, photoURL: photoURL });
         setName("");
         setPhotoURL("");
+
         Swal.fire({
           icon: "success",
           title: "update profile Successful!",
           text: "You have successfully update your profile.",
         });
         navigate("/");
+        setLoading(false);
       })
       .catch(() => {});
   };
