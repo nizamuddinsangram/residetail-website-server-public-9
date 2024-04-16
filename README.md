@@ -1,6 +1,6 @@
-# MyWebsite
+# Residential
 
-[Live Site](https://www.mywebsite.com)
+[Live Site](https://residential-website-9eea9.web.app/)
 
 ## Features and Characteristics:
 

@@ -119,7 +119,7 @@ const Login = () => {
                   name="password"
                   id="password"
                   placeholder="Password"
-                  className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-200 text-white focus:border-violet-400"
+                  className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-200 text-black focus:border-violet-400"
                 />
                 <div className="flex justify-end text-xs text-white">
                   <a href="#" className="underline">

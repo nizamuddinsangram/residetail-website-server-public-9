@@ -36,7 +36,7 @@ const EstateDetails = () => {
             </p>
             <div className="flex justify-between text-3xl my-2">
               <p>Price{singleData?.price}</p>
-              <p>status:{singleData?.status}</p>
+              <p>Area: {singleData?.area}</p>
             </div>
             <div>
               <p className="text-2xl font-bold">Facilities:</p>

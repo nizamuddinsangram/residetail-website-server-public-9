@@ -5,11 +5,12 @@ import Swal from "sweetalert2";
 
 import { useForm } from "react-hook-form";
 import { FaEye, FaRegEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import img from "../../../public/login.avif";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const { createUser } = useContext(AuthContext);
 
@@ -38,6 +39,7 @@ const Register = () => {
               title: "Registration Successful!",
               text: "You have successfully registered.",
             });
+            navigate("/");
           })
           .catch(() => {});
       })
@@ -97,7 +99,7 @@ const Register = () => {
                   name="photo"
                   id="photo"
                   placeholder="photoUrl"
-                  className="w-full px-4 py-3 rounded-md border-gray-700 bg-rose-100 text-white focus:border-violet-400"
+                  className="w-full px-4 py-3 rounded-md border-gray-700 bg-rose-100 text-black focus:border-violet-400"
                 />
               </div>
               <div className="space-y-1 text-sm">
