@@ -2,7 +2,7 @@
   {
     "id": 1,
     "estate_title": "Modern Single Family Home",
-    "segment_name": "Residential",
+    "segment_name": "Single-family homes",
     "description": "Beautiful modern single family home with spacious living areas.",
     "price": "$500,000",
     "status": "sale",
@@ -14,7 +14,7 @@
   {
     "id": 2,
     "estate_title": "Luxury Townhouse",
-    "segment_name": "Residential",
+    "segment_name": "townhouses",
     "description": "Luxurious townhouse with elegant interiors and stunning views.",
     "price": "$700,000",
     "status": "sale",
@@ -26,7 +26,7 @@
   {
     "id": 3,
     "estate_title": "Modern Apartment",
-    "segment_name": "Residential",
+    "segment_name": "apartments",
     "description": "Modern apartment in a prime location with top-notch amenities.",
     "price": "$2,000/month",
     "status": "rent",
@@ -74,7 +74,7 @@
   {
     "id": 7,
     "estate_title": "Country Estate",
-    "segment_name": "Residential",
+    "segment_name": "Country",
     "description": "Spacious country estate with acres of land and picturesque surroundings.",
     "price": "$1,200,000",
     "status": "sale",
@@ -98,7 +98,7 @@
   {
     "id": 9,
     "estate_title": "City Loft",
-    "segment_name": "Residential",
+    "segment_name": "City",
     "description": "Chic loft apartment in the heart of the city with urban vibes.",
     "price": "$1,500/month",
     "status": "rent",
